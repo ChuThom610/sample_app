@@ -44,3 +44,15 @@ en:
       title: "Help"
     log_in:
       title: "Log in"
+  users:
+    new:
+      sign_up: "Sign up"
+      confirm: "Confirmation"
+      create_account: "Create my account"
+  messages:
+    fail: "Not find User!"
+  flashs:
+    success: "Welcome to the Sample App!"
+  shared:
+    form_contains: "The form contains"
+
