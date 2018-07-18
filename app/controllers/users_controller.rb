@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.activated_user.load_data
-                 .paginate(page: params[:page], per_page: Settings.paginate.per_page)
+                 .paginate(page: params[:page], per_page: Settings.paginate.per)
   end
 
   def show; end

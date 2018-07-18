@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         end
         redirect_back_or user
       else
-        message  = t "flashs.message"
+        message = t "flashs.message"
         flash[:warning] = message
         redirect_to root_url
       end
