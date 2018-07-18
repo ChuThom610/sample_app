@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       else
         forget user
       end
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = t "flashs.login_danger"
       render :new

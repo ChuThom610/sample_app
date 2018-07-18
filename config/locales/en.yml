@@ -49,17 +49,30 @@ en:
     help:
       title: "Help"
   users:
+    index:
+      all_users: "All users"
+      delete: "delete"
+      you_sure: "You sure?"
     new:
       sign_up: "Sign up"
       confirm: "Confirmation"
       create_account: "Create my account"
+    edit:
+      edit_user: "Edit user"
+      update_your_profile: "Update your profile"
+      save_changes: "Save changes"
+      change: "change"
   sessions:
     new:
       remember_me: "Remember me on this computer"
   flashs:
-    success: "Welcome to the Sample App!"
+    welcome_app: "Welcome to the Sample App!"
     not_found_user: "Not found User!"
     login_danger: "Invalid email/password combination"
+    profile_updated: "Profile updated"
+    please_login: "Please log in."
+    user_deleted: "User deleted"
+    fail_delete_user: "Delete user failed!"
   shared:
     form_contains: "The form contains"
   accounts:

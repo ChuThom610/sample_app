@@ -9,3 +9,8 @@ model:
 session:
   create:
     remember_me: 1
+gravatar:
+  size: 80
+  for_user: 50
+paginate:
+  per_page: 15
