@@ -2,7 +2,13 @@ class Micropost < ApplicationRecord
   belongs_to :user
 
   scope :order_microposts, ->{order created_at: :desc}
-  scope :feed, ->(id){where user_id: id}
+
+  scope :feed, (lambda do |id|
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE follower_id = :user_id"
+    where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+  end)
+
   mount_uploader :picture, PictureUploader
 
   validates :content, presence: true,
