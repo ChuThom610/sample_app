@@ -31,28 +31,37 @@
 
 en:
   base_title: "Ruby on Rails Tutorial Sample App"
-  sample_app: "sample app"
-  new: "News"
+  layouts:
+    header:
+      sample_app: "sample app"
+      users: "Users"
+    footer:
+      news: "News"
   static_pages:
     home:
       title: "Home"
+      login: "Log in"
+      signup_now: "Sign up now!"
     about:
       title: "About"
     contact:
       title: "Contact"
     help:
       title: "Help"
-    log_in:
-      title: "Log in"
   users:
     new:
       sign_up: "Sign up"
       confirm: "Confirmation"
       create_account: "Create my account"
-  messages:
-    fail: "Not find User!"
   flashs:
     success: "Welcome to the Sample App!"
+    not_found_user: "Not found User!"
+    login_danger: "Invalid email/password combination"
   shared:
     form_contains: "The form contains"
+  accounts:
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Log out"
 
