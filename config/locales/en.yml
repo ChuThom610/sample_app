@@ -53,6 +53,9 @@ en:
       sign_up: "Sign up"
       confirm: "Confirmation"
       create_account: "Create my account"
+  sessions:
+    new:
+      remember_me: "Remember me on this computer"
   flashs:
     success: "Welcome to the Sample App!"
     not_found_user: "Not found User!"
