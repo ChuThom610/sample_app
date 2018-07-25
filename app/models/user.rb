@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  scope :load_data, ->{select(:id, :name, :email).order :name}
   attr_accessor :remember_token
   before_save :downcase_email
 
@@ -11,15 +12,16 @@ class User < ApplicationRecord
                     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true,
-                       length: {minimum: Settings.model.users.password.minimum}
+                       length: {minimum: Settings.model.users.password.minimum},
+                       allow_nil: true
 
   class << self
     def digest string
-      cost =  if ActiveModel::SecurePassword.min_cost
-                BCrypt::Engine::MIN_COST
-              else
-                BCrypt::Engine.cost
-              end
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
       BCrypt::Password.create string, cost: cost
     end
 
@@ -40,6 +42,10 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: nil
+  end
+
+  def current_user? user
+    user == self
   end
 
   private
