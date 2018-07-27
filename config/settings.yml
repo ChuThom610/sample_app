@@ -16,3 +16,12 @@ paginate:
   per: 15
 timeout:
   reset_sent: 2
+microposts:
+  content:
+    maximum: 140
+micropost_size: 50
+picture: 5
+size_in_mega: 5
+picture_height: 400
+picture_width: 400
+accept_type: "image/jpeg,image/gif,image/png"

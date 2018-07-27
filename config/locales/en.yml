@@ -11,6 +11,11 @@ en:
       title: "Home"
       login: "Log in"
       signup_now: "Sign up now!"
+      welcome_to: "Welcome to the Sample App"
+      this: "This is the home page for the"
+      rails_tutorial: "Ruby on Rails Tutorial"
+      sample_application: "sample application."
+      feed: "Micropost Feed"
     about:
       title: "About"
     contact:
@@ -31,6 +36,8 @@ en:
       update_your_profile: "Update your profile"
       save_changes: "Save changes"
       change: "change"
+    show:
+      microposts: "Microposts %{microposts_count} ."
   sessions:
     new:
       remember_me: "Remember me on this computer"
@@ -54,8 +61,15 @@ en:
     cannot_empty: "can't be empty"
     been_reset: "Password has been reset."
     expired: "Password reset has expired."
+    micropost_created: "Micropost created!"
+    micropost_deleted: "Micropost deleted!"
+    fail_delete_micropost: "Delete micropost failed!"
   shared:
     form_contains: "The form contains"
+    view_profile: "view my profile"
+    placeholder: "Compose new micropost..."
+    post: "Post"
+    max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
   accounts:
     account: "Account"
     profile: "Profile"
@@ -78,4 +92,10 @@ en:
       submit: "Submit"
     edit:
       update_password: "Update password"
-
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      you_sure: "You sure?"
+      delete: "delete"
+  less: "should be less than 5MB"
