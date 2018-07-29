@@ -37,7 +37,15 @@ en:
       save_changes: "Save changes"
       change: "change"
     show:
-      microposts: "Microposts %{microposts_count} ."
+      microposts: "Microposts (%{microposts_count})"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    title:
+      following: "Following"
+      followers: "Followers"
+    show_follow:
+      my_profile: "view my profile"
+      microposts: "Microposts:"
   sessions:
     new:
       remember_me: "Remember me on this computer"
@@ -70,6 +78,8 @@ en:
     placeholder: "Compose new micropost..."
     post: "Post"
     max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
+    following: "following"
+    followers: "followers"
   accounts:
     account: "Account"
     profile: "Profile"

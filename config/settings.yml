@@ -12,8 +12,7 @@ session:
 gravatar:
   size: 80
   for_user: 50
-paginate:
-  per: 15
+per_page: 15
 timeout:
   reset_sent: 2
 microposts:
@@ -25,3 +24,4 @@ size_in_mega: 5
 picture_height: 400
 picture_width: 400
 accept_type: "image/jpeg,image/gif,image/png"
+follow_size: 30

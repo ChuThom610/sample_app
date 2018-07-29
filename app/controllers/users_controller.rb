@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.activated_user.load_data
-                 .paginate(page: params[:page], per_page: Settings.paginate.per)
+                 .paginate(page: params[:page], per_page: Settings.per_page)
   end
 
   def show
     @microposts = @user.microposts.paginate(page: params[:page],
-                                            per_page: Settings.paginate.per)
+                                            per_page: Settings.per_page)
   end
 
   def new
@@ -47,6 +47,18 @@ class UsersController < ApplicationController
       flash[:danger] = t "flashs.fail_delete_user"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = t("users.title.following")
+    @users = @user.following.paginate(page: params[:page])
+    render :show_follow
+  end
+
+  def followers
+    @title = t("users.title.followers")
+    @users = @user.followers.paginate(page: params[:page])
+    render :show_follow
   end
 
   private
